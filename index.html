@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CONVERGE '26 | India's Student Innovation Hackathon</title>
+  <meta name="description" content="CONVERGE '26 is a 48-hour online student innovation hackathon organised by DEZAI. Build, solve, and compete for a ₹30,000 cash prize pool.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader" aria-hidden="true">
+    <div class="loader-mark"><span></span><span></span><span></span></div>
+    <div class="loader-name">CONVERGE '26</div>
+    <div class="loader-sub">INITIALISING INDIA'S INNOVATION NETWORK</div>
+  </div>
+
+  <div class="noise"></div>
+  <div class="cursor-ring"></div>
+  <div class="cursor-dot"></div>
+  <canvas id="scene" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a href="#top" class="brand" aria-label="DEZAI">
+      <img src="assets/dezai.png" alt="DEZAI">
+      <span>DEZAI</span>
+    </a>
+    <div class="nav-status"><i></i> INDIA / ONLINE / 48H</div>
+    <button class="nav-cta magnetic" data-register>REGISTER <b>↗</b></button>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy reveal">
+        <div class="kicker">DEZAI PRESENTS · INDIA · EDITION '26</div>
+        <h1>CONVERGE<br><em>'26</em></h1>
+        <p class="hero-title">India's Student Innovation Hackathon</p>
+        <p class="hero-text">48 hours. One idea. A working prototype. Build something real across six challenge tracks and put it in front of judges.</p>
+        <div class="hero-actions">
+          <button class="button primary magnetic" data-register>REGISTER NOW <span>↗</span></button>
+          <a class="button secondary magnetic" href="#tracks">EXPLORE TRACKS <span>↓</span></a>
+        </div>
+        <div class="hero-meta">
+          <span><b>6–7</b> OCT 2026</span>
+          <span><b>48</b> HOURS</span>
+          <span><b>₹30K</b> CASH PRIZE</span>
+        </div>
+      </div>
+      <div class="hero-orbit">
+        <div class="orbit-label label-india">INDIA / BUILD</div>
+        <div class="orbit-label label-core">CONVERGE</div>
+        <div class="orbit-label label-prize">₹30,000</div>
+        <div class="crosshair"></div>
+        <div class="globe-hint">DRAG THE GLOBE</div>
+      </div>
+      <div class="scroll-cue"><span>SCROLL TO BUILD</span><i></i></div>
+    </section>
+
+    <section id="event" class="section event-section">
+      <div class="section-top"><span>01 / THE EVENT</span><span>100% ONLINE · INDIA</span></div>
+      <div class="event-grid">
+        <div class="event-head reveal"><h2>IDEAS<br><span>MEET</span><br>EXECUTION.</h2></div>
+        <div class="event-copy reveal">
+          <p class="lead">CONVERGE '26 is a 48-hour online student innovation hackathon organised by DEZAI for student builders across India.</p>
+          <p>Bring an idea, form a team of up to four, and turn it into a working prototype during the official build window. Solo builders are welcome.</p>
+          <div class="facts">
+            <div><small>FORMAT</small><strong>100% ONLINE</strong></div>
+            <div><small>TEAM SIZE</small><strong>1–4 MEMBERS</strong></div>
+            <div><small>ELIGIBILITY</small><strong>STUDENTS · 16+</strong></div>
+            <div><small>BUILD WINDOW</small><strong>48 HOURS</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tracks" class="section tracks-section">
+      <div class="section-top"><span>02 / THE TRACKS</span><span>CLICK A TRACK · 6 PROBLEM STATEMENTS</span></div>
+      <div class="tracks-heading reveal">
+        <div><h2>BUILD WHERE<br><span>IT MATTERS.</span></h2></div>
+        <p>Six focused domains. Each opens six problem statements. The sixth is always an open brief within that domain.</p>
+      </div>
+      <div class="track-grid" id="trackGrid"></div>
+      <div class="alignment-note reveal"><span>ALIGNMENT NOTE</span> The UNESCO, World Bank, UNDP, UNICEF and WHO labels below are <b>thematic alignment references only</b>, not partnerships or endorsements.</div>
+    </section>
+
+    <section id="schedule" class="section schedule-section">
+      <div class="section-top"><span>03 / THE CLOCK</span><span>IST</span></div>
+      <div class="schedule-wrap">
+        <div class="schedule-title reveal"><h2>48 HOURS.<br><span>MAKE IT REAL.</span></h2></div>
+        <div class="timeline">
+          <div class="time-row reveal"><div class="time">6 OCT<br><b>09:30</b></div><div><small>OPENING</small><h3>OPENING CEREMONY</h3><p>Briefing, challenge orientation and Q&A.</p></div></div>
+          <div class="time-row live reveal"><div class="time">6 OCT<br><b>10:00</b></div><div><small>START</small><h3>HACKING BEGINS</h3><p>The official 48-hour build window starts.</p></div></div>
+          <div class="time-row reveal"><div class="time">6 OCT<br><b>AFTERNOON</b></div><div><small>SUPPORT</small><h3>MENTOR HOURS</h3><p>Optional mentor office hours and community support.</p></div></div>
+          <div class="time-row live reveal"><div class="time">7 OCT<br><b>10:00</b></div><div><small>DEADLINE</small><h3>HACKING ENDS</h3><p>Exactly 48 hours after the start.</p></div></div>
+          <div class="time-row reveal"><div class="time">7 OCT<br><b>12:00</b></div><div><small>GRACE</small><h3>SUBMISSION DEADLINE</h3><p>Upload your project and demo video.</p></div></div>
+          <div class="time-row reveal"><div class="time">13 OCT</div><div><small>REVEAL</small><h3>WINNERS ANNOUNCED</h3><p>Overall winner, runner-up and second runner-up.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prizes" class="section prize-section">
+      <div class="section-top"><span>04 / THE PRIZE</span><span>₹30,000 CASH POOL</span></div>
+      <div class="prize-layout">
+        <div class="prize-intro reveal"><div class="prize-burst">₹</div><h2>BUILD.<br><span>WIN.</span></h2><p>Three overall cash awards are selected across all tracks.</p></div>
+        <div class="prize-list">
+          <div class="prize-card first reveal"><span>GLOBAL WINNER</span><strong>₹15,000</strong><small>BEST OVERALL PROJECT</small></div>
+          <div class="prize-card reveal"><span>RUNNER-UP</span><strong>₹9,000</strong><small>SECOND-BEST OVERALL</small></div>
+          <div class="prize-card reveal"><span>2ND RUNNER-UP</span><strong>₹6,000</strong><small>THIRD-BEST OVERALL</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section pricing-section">
+      <div class="section-top"><span>05 / REGISTRATION</span><span>₹49–₹199 / TEAM</span></div>
+      <div class="pricing-head reveal"><div><h2>ONE PRICE.<br><span>EVERY BUILDER.</span></h2></div><p>Team registration starts at ₹49 for solo builders and goes up to ₹199 for four-member teams. Early bird runs until 29 September 2026 with <b>20% off</b> the final registration total.</p></div>
+      <div class="price-grid">
+        <div class="price-card reveal"><small>01 / SOLO</small><strong>₹49</strong><span>1 participant</span><button data-register>REGISTER ↗</button></div>
+        <div class="price-card reveal"><small>02 / DUO</small><strong>₹99</strong><span>2 participants</span><button data-register>REGISTER ↗</button></div>
+        <div class="price-card featured reveal"><small>03 / TRIO</small><strong>₹149</strong><span>3 participants</span><button data-register>REGISTER ↗</button></div>
+        <div class="price-card reveal"><small>04 / SQUAD</small><strong>₹199</strong><span>4 participants</span><button data-register>REGISTER ↗</button></div>
+      </div>
+      <div class="early-bird reveal"><span>EARLY BIRD</span><strong>20% OFF</strong><small>UNTIL 29 SEPTEMBER · APPLIED TO THE FINAL REGISTRATION TOTAL</small></div>
+    </section>
+
+    <section id="submit" class="section submit-section">
+      <div class="section-top"><span>06 / WHAT YOU SUBMIT</span><span>BUILD IT · SHOW IT</span></div>
+      <div class="submit-grid">
+        <div class="submit-title reveal"><h2>NOT A<br><span>SLIDE DECK.</span></h2></div>
+        <div class="submit-items">
+          <div class="submit-item reveal"><b>01</b><div><h3>WORKING PROTOTYPE</h3><p>MVP, working prototype or convincing proof-of-concept.</p></div></div>
+          <div class="submit-item reveal"><b>02</b><div><h3>CODE REPOSITORY</h3><p>Public or private repository. GitHub or GitLab preferred.</p></div></div>
+          <div class="submit-item reveal"><b>03</b><div><h3>DEMO VIDEO</h3><p>Show the product working. 2–4 minutes recommended.</p></div></div>
+          <div class="submit-item reveal"><b>04</b><div><h3>PROJECT DESCRIPTION</h3><p>Problem, solution, tech stack, track and team details.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rules" class="section rules-section">
+      <div class="section-top"><span>07 / THE RULES</span><span>ESSENTIALS ONLY</span></div>
+      <div class="rules-grid">
+        <div class="rule reveal"><b>01</b><h3>BUILD DURING THE WINDOW</h3><p>Pre-existing libraries, frameworks and tools are allowed. Pre-built full solutions are not.</p></div>
+        <div class="rule reveal"><b>02</b><h3>ONE TEAM</h3><p>Each participant may belong to only one team. Team size is 1–4.</p></div>
+        <div class="rule reveal"><b>03</b><h3>OWN YOUR IP</h3><p>Participants retain ownership of their intellectual property. Organisers receive a non-exclusive showcase licence.</p></div>
+        <div class="rule reveal"><b>04</b><h3>PLAY FAIR</h3><p>No plagiarism, harassment, hate speech or discrimination. Rule violations can lead to disqualification.</p></div>
+      </div>
+    </section>
+
+    <section id="register" class="section final-section">
+      <div class="final-glow"></div>
+      <div class="final-content reveal">
+        <div class="kicker">INDIA · 6–7 OCTOBER 2026 · 48 HOURS</div>
+        <h2>READY TO<br><span>CONVERGE?</span></h2>
+        <p>Bring the idea. Build the prototype. Make it real.</p>
+        <button class="button primary giant magnetic" data-register>REGISTER FOR CONVERGE '26 <span>↗</span></button>
+      </div>
+      <footer><div><img src="assets/dezai.png" alt="DEZAI"><span>Organised by DEZAI</span></div><div class="partner-logos"><span>In collaboration with</span><img src="assets/truvad.png" alt="Truvad"><img src="assets/pranavx.png" alt="PranavX Labs"></div><div>© 2026 CONVERGE '26</div></footer>
+    </section>
+  </main>
+
+  <div class="modal track-modal" id="trackModal" aria-hidden="true">
+    <div class="modal-box track-modal-box">
+      <button class="modal-close" data-close="trackModal" aria-label="Close">×</button>
+      <div class="kicker" id="trackModalKicker">TRACK</div>
+      <h2 id="trackModalTitle">PROBLEM<br><span>STATEMENTS.</span></h2>
+      <p class="modal-sub" id="trackModalSub"></p>
+      <div class="problem-list" id="problemList"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="registerModal" aria-hidden="true">
+    <div class="modal-box register-box">
+      <button class="modal-close" data-close="registerModal" aria-label="Close">×</button>
+      <div class="kicker">CONVERGE '26 · REGISTRATION</div>
+      <h2>BUILD YOUR<br><span>TEAM.</span></h2>
+      <div class="early-banner"><b>EARLY BIRD · 20% OFF</b><span>Valid through 29 September 2026</span></div>
+      <form id="registrationForm" action="https://formsubmit.co/ajax/dhairyadesai46@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="CONVERGE '26 Registration">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="event" value="CONVERGE '26">
+        <input type="hidden" name="registration_pricing" value="₹49 solo · ₹99 duo · ₹149 trio · ₹199 squad">
+        <input type="hidden" name="early_bird_discount" value="20% until 29 September 2026">
+        <input type="hidden" name="registration_total" id="registrationTotalField">
+        <input type="hidden" name="discounted_total" id="discountedTotalField">
+
+        <div class="form-grid">
+          <label>FULL NAME<input required name="name" autocomplete="name" placeholder="Your full name"></label>
+          <label>EMAIL<input required type="email" name="email" autocomplete="email" placeholder="you@example.com"></label>
+          <label>WHATSAPP NUMBER<input required type="tel" name="whatsapp" autocomplete="tel" placeholder="+91 98765 43210"></label>
+          <label>INSTITUTION<input required name="institution" placeholder="School / College / University"></label>
+          <label>TEAM NAME<input required name="team_name" placeholder="Your team name"></label>
+          <label>TEAM LEAD<input required name="team_lead" placeholder="Team lead name"></label>
+          <label class="full">PRIMARY TRACK<select required name="primary_track" id="registrationTrack"><option value="">Select a track</option></select></label>
+        </div>
+
+        <div class="team-size-row">
+          <div><small>TEAM MEMBERS</small><strong id="memberCount">1</strong><span>participant(s)</span></div>
+          <div class="stepper"><button type="button" id="minusMember" aria-label="Remove member">−</button><button type="button" id="plusMember" aria-label="Add member">+</button></div>
+        </div>
+
+        <div class="price-summary">
+          <div><span>Base total</span><strong id="baseTotal">₹49</strong></div>
+          <div><span>Early bird</span><strong id="discountAmount">−₹9.80</strong></div>
+          <div class="grand"><span>Final registration</span><strong id="finalTotal">₹39.20</strong></div>
+        </div>
+
+        <label class="consent"><input required type="checkbox" name="consent" value="Accepted"><span>I confirm the information above is accurate and I agree to the CONVERGE '26 participation terms.</span></label>
+        <button class="button primary form-submit" type="submit" id="submitRegistration">SUBMIT REGISTRATION <span>↗</span></button>
+        <p class="form-note">Your registration details will be emailed to the CONVERGE organising team. Payment collection is not processed by this form.</p>
+      </form>
+      <div class="success-state" id="successState" hidden>
+        <div class="success-mark">✓</div>
+        <h3>REGISTRATION<br><span>RECEIVED.</span></h3>
+        <p>Your details have been submitted successfully. The organising team will contact the team lead using the details provided.</p>
+        <button class="button secondary" data-close="registerModal">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
